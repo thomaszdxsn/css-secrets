@@ -38,7 +38,15 @@ const Page = () => (
         </section>
         <section className="section25">
             <h2>二十五、华丽的 & 符号</h2>
-
+            <p>略...</p>
+        </section>
+        <section className="section26">
+            <h2>二十六、自定义下划线</h2>
+            <p>略...</p>
+        </section>
+        <section className="section27">
+            <h2>二十七、现实中的文字效果</h2>
+            <p>略...</p>
         </section>
         <style jsx>{`
             .section20 > div {

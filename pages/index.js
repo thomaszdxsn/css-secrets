@@ -14,6 +14,8 @@ const Index = () => {
         {href: '/chapter8', title: '第八章：过渡与动画'}
     ]
     return (
+        <>
+        <h2>CSS揭秘</h2>
         <ul>
             {links.map(item => (
                 <li key={item.href}>
@@ -23,6 +25,16 @@ const Index = () => {
                 </li>
             ))}
         </ul>
+        <hr />
+        <h2>Three.js 开发指南</h2>
+        <ul>
+            <li>
+                <Link href={'threejs/chapter1'}>
+                    <a>第一章：使用 Three.js 来开发你的第一个三维场景</a>
+                </Link>
+            </li>
+        </ul>
+        </>
     )
 };
 
