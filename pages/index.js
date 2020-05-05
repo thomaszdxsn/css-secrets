@@ -11,7 +11,8 @@ const ThreeJsLinks = [
 ];
 
 const CS291Links = [
-    {href: 'cs291/lession2chapter13', title: '创建一个正方形'}
+    {href: 'cs291/lession2chapter13', title: '创建一个正方形'},
+    {href: 'cs291/polygon-creator', title: 'Polygon Creator'},
 ]
 
 
