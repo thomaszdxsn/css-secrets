@@ -21,7 +21,7 @@ class SceneMixin {
         this.scene.add(this.camera);
 ``
         this.renderer = new THREE.WebGLRenderer({
-            antialias: false,
+            antialias: true,
             preserveDrawingBuffer: true
         })
         this.renderer.setSize(this.canvasWidth, this.canvasHeight);
@@ -73,16 +73,17 @@ export default class PolygonScene extends SceneMixin {
     }
 
     drawMeshs() {
-        this.drawPolygon(6);
+        const location = {x: -1, y: 1}
+        this.drawPolygon(100, .5, location);
     }
 
-    drawPolygon(sides) {
+    drawPolygon(sides, radius, location) {
         const geo = new THREE.Geometry();
         for (let pt of range(sides)) {
             // 逆时针转 90 度
             const angle = (Math.PI / 2) + (pt / sides) * 2 * Math.PI
-            const x = Math.cos(angle);
-            const y = Math.sin(angle);
+            const x = location.x +Math.cos(angle) * radius;
+            const y = location.y + Math.sin(angle) * radius;
             geo.vertices.push(new THREE.Vector3(x, y, 0.0));
         }
 

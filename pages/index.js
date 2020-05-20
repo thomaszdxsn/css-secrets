@@ -13,6 +13,11 @@ const ThreeJsLinks = [
 const CS291Links = [
     {href: 'cs291/lession2chapter13', title: '创建一个正方形'},
     {href: 'cs291/polygon-creator', title: 'Polygon Creator'},
+    {href: 'cs291/stairway', title: 'Stairway'},
+]
+
+const FullstackD3Links = [
+    {href: 'fullstack-d3/making-your-first-chart', title: 'making your first chart'}
 ]
 
 
@@ -70,6 +75,16 @@ const Index = () => {
         <h2>CS291</h2>
         <ul>
             {CS291Links.map(link => (
+                <li key={link.href}>
+                    <Link href={link.href} passHref>
+                        <a>{link.title}</a>
+                    </Link>
+                </li>
+            ))}
+        </ul>
+        <h2>Fullstack D3.js</h2>
+        <ul>
+            {FullstackD3Links.map(link => (
                 <li key={link.href}>
                     <Link href={link.href} passHref>
                         <a>{link.title}</a>
